@@ -15,7 +15,7 @@ export default class EditQuestion extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:8000/questions/'+this.props.match.params.id)
+    axios.get('https://trivia-backend-api.herokuapp.com/questions/'+this.props.match.params.id)
       .then(response => {
         this.setState({
           question: response.data.question,

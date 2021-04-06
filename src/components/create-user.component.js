@@ -27,8 +27,8 @@ export default class CreateUser extends Component {
     }
 
     console.log(user);
-
-    axios.post('http://localhost:5000/users/add', user)
+    //"https://trivia-backend-api.herokuapp.com/users/add"
+    axios.post('https://trivia-backend-api.herokuapp.com/users/add', user)
       .then(res => console.log(res.data));
 
     this.setState({

@@ -17,9 +17,9 @@ export default class QuestionsList extends Component {
         super(props);
         this.state = {questions: []};
     }
-    
+    //'https://trivia-backend-api.herokuapp.com/questions/'
     componentDidMount() {
-        axios.get('http://localhost:8000/questions/')
+        axios.get('https://trivia-backend-api.herokuapp.com/questions/')
           .then(response => {
             this.setState({ questions: response.data })
           })
